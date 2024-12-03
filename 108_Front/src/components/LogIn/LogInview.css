@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #161932, #5d2b7a);
+  background-size: 400% 400%;
+  animation: gradientMove 10s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: #1e1e2f;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  /* למנוע גלילה פנימית */
+}
+
+.login-container.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.login-container.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.form-wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #a882e4;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #c8a2e6;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #2d2d45;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(165, 82, 228, 0.8), 0 0 30px rgba(165, 82, 228, 0.6);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #824199, #2093d2);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #2093d2, #824199);
+  transform: scale(1.05);
+}
+
+.toggle-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #c8a2e6;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.toggle-button:hover {
+  color: #a882e4;
+}
